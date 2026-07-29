@@ -2,7 +2,7 @@
 
 This portfolio documents a practical learning path for anlyzing and improving SQL Sever query performance.
 
-##Phase 1: Git and Github Workflow
+## Phase 1: Git and Github Workflow
 
 - Create a professional repository.
 - Work with branches and meaningful commits.
