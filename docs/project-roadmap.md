@@ -1,18 +1,18 @@
 # Project Roadmap
 
-This portfolio documents a practical learning path for anlyzing and improving SQL Sever query performance.
+This portfolio documents a practical learning path for analyzing and improving SQL Server query performance.
 
-## Phase 1: Git and Github Workflow
+## Phase 1: Git and GitHub Workflow
 
 - Create a professional repository.
 - Work with branches and meaningful commits.
 - Review changes through pull requests.
-- Tag stabel project milestones.
+- Tag stable project milestones.
 
 ## Phase 2: SQL Server Environment
 
 - Prepare a reproducible sample database.
-- Document the database structure an test conditions.
+- Document the database structure and test conditions.
 - Define the metrics used to compare query performance.
 
 ## Phase 3: Baseline Analysis
@@ -29,6 +29,7 @@ This portfolio documents a practical learning path for anlyzing and improving SQ
 - Compare results against the baseline.
 
 ## Phase 5: Results and Conclusions
+
 - Present before-and-after measurements.
 - Explain each technical decision.
 - Document limitations and possible future improvements.
