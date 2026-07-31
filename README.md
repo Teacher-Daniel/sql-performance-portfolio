@@ -1,13 +1,20 @@
 # SQL Server Performance Portfolio
 
-Proyecto práctico para documentar el análisis y la optimización de consultas en SQL Server.
+A hands-on portfolio documenting the analysis and optimization of SQL Server queries.
 
-## Objetivos
+[Versión en español](README.es.md)
 
-- Interpretar planes de ejecución.
-- Identificar problemas de rendimiento.
-- medir mejoras antes y después.
-- documentar decisiones técnicas.
+## Objectives
 
+- Interpret actual execution plans.
+- Identify query performance issues.
+- Measure improvements using repeatable baselines.
+- Document technical decisions and trade-offs.
 
+## Roadmap
 
+See the [project roadmap](docs/project-roadmap.md).
+
+## Lab Environment
+
+Review the [lab configuration](docs/lab-environment.md) and run the [environment validation script](sql/00-setup/validate-environment.sql).
