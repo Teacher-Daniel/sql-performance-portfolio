@@ -14,3 +14,7 @@ Proyecto práctico para documentar el análisis y la optimización de consultas 
 ## Hoja de ruta
 
 Consulta la [hoja de ruta del proyecto](docs/project-roadmap.md).
+
+## Entorno de laboratorio
+
+Consulta la [configuración del laboratorio](docs/lab-environment.md) y ejecuta el [script de validación del entorno](sql/00-setup/validate-environment.sql).

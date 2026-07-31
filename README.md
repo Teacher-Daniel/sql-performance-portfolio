@@ -14,3 +14,7 @@ A hands-on portfolio documenting the analysis and optimization of SQL Server que
 ## Roadmap
 
 See the [project roadmap](docs/project-roadmap.md).
+
+## Lab Environment
+
+Review the [lab configuration](docs/lab-environment.md) and run the [environment validation script](sql/00-setup/validate-environment.sql).
