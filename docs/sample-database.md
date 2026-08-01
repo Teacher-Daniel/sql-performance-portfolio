@@ -30,9 +30,9 @@ erDiagram
 | `telemetry` | `TelemetryEvent` | Time-series location and vehicle-state events |
 | `telemetry` | `Alert` | Operational alerts generated from telemetry events |
 
-## Target Row Counts
+## Verified Row Counts
 
-| Table | Target rows |
+| Table | Verified rows |
 |---|---:|
 | `crm.Customer` | 20,000 |
 | `fleet.Vehicle` | 40,000 |
@@ -45,13 +45,13 @@ The dataset is large enough to produce meaningful differences in logical reads a
 
 ## Data Characteristics
 
-The generator will create deterministic and intentionally uneven distributions:
+The generators create deterministic and controlled distributions:
 
 - Customers distributed across several Latin American country codes.
 - Different numbers of vehicles per customer.
 - Active, standby, and inactive devices.
 - Current, expired, and cancelled policies.
-- Uneven event volumes across devices and dates.
+- Exactly 25 events per device distributed across approximately 25 weeks.
 - Open, closed, and escalated alerts.
 - Repeated values suitable for cardinality-estimation experiments.
 
@@ -86,3 +86,34 @@ The database will support experiments involving:
 The model prioritizes performance-learning scenarios over complete business functionality. It does not represent a production-ready insurance or telematics platform.
 
 Performance results are comparative measurements from the local lab and are not production-capacity claims.
+
+## Build Order
+
+Execute the scripts against the `SQL2025LAB` instance in the following order:
+
+1. [`01-create-database.sql`](../sql/01-database/01-create-database.sql) creates and configures `FleetTelemetryLab`.
+2. [`02-create-schema.sql`](../sql/01-database/02-create-schema.sql) creates the schemas, tables, constraints, and baseline indexes.
+3. [`03-load-reference-data.sql`](../sql/01-database/03-load-reference-data.sql) loads customers, vehicles, devices, and policies.
+4. [`04-load-telemetry-data.sql`](../sql/01-database/04-load-telemetry-data.sql) loads one million telemetry events and 120,000 alerts.
+5. [`05-validate-sample-database.sql`](../sql/01-database/05-validate-sample-database.sql) performs the independent final validation.
+
+The creation and loading scripts contain safety checks and refuse to overwrite an existing build. The validation script does not modify permanent data.
+
+## Verified Build Results
+
+| Measurement | Observed result |
+|---|---:|
+| Total rows across the six tables | 1,280,000 |
+| Reference-data loading time | 4,785 ms |
+| Telemetry and alert loading time | 15,954 ms |
+| Validation checks passed | 45 of 45 |
+| Validation execution time | 4,281 ms |
+| Approximate reserved table space | 73 MB |
+
+Execution times describe this specific local lab build. They are reproducibility evidence, not production-capacity benchmarks.
+
+## Baseline Index State
+
+The initial schema contains only the clustered primary keys and the unique indexes required by business-key constraints.
+
+Supporting foreign-key indexes and query-specific performance indexes are intentionally omitted. This preserves an unoptimized baseline for measuring scans, lookups, logical reads, execution time, cardinality estimates, and plan changes during later experiments.
