@@ -18,3 +18,7 @@ See the [project roadmap](docs/project-roadmap.md).
 ## Lab Environment
 
 Review the [lab configuration](docs/lab-environment.md) and run the [environment validation script](sql/00-setup/validate-environment.sql).
+
+## Sample Database
+
+Review the [Fleet Telemetry sample database](docs/sample-database.md), including its build order, verified row counts, and validation results.
