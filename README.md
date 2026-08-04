@@ -28,3 +28,4 @@ Review the [Fleet Telemetry sample database](docs/sample-database.md), including
 | # | Experiment | Main finding | Status |
 |---|---|---|---|
 | 01 | [Date predicate SARGability](sql/02-experiments/01-date-sargability/README.md) | A half-open date range reduced logical reads by 82.0% compared with function-based filtering using the same index. | Completed |
+| 02 | [Key Lookups and covering indexes](sql/02-experiments/02-key-lookup-covering-index/README.md) | A covering index eliminated 500 Key Lookups and reduced logical reads from 1,544 to 6 (99.61%). | Completed |
