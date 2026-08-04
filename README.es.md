@@ -22,3 +22,9 @@ Consulta la [configuración del laboratorio](docs/lab-environment.md) y ejecuta 
 ## Base de datos de muestra
 
 Consulta la [base de datos de telemetría vehicular](docs/sample-database.md), incluyendo el orden de construcción, los volúmenes verificados y los resultados de validación.
+
+## Experimentos de rendimiento
+
+| # | Experimento | Hallazgo principal | Estado |
+|---|---|---|---|
+| 01 | [SARGabilidad de predicados de fecha](sql/02-experiments/01-date-sargability/README.md) | Un intervalo de fechas semiabierto redujo las lecturas lógicas 82.0% frente al filtrado mediante funciones utilizando el mismo índice. | Completado |

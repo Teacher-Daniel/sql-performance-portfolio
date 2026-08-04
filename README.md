@@ -22,3 +22,9 @@ Review the [lab configuration](docs/lab-environment.md) and run the [environment
 ## Sample Database
 
 Review the [Fleet Telemetry sample database](docs/sample-database.md), including its build order, verified row counts, and validation results.
+
+## Performance Experiments
+
+| # | Experiment | Main finding | Status |
+|---|---|---|---|
+| 01 | [Date predicate SARGability](sql/02-experiments/01-date-sargability/README.md) | A half-open date range reduced logical reads by 82.0% compared with function-based filtering using the same index. | Completed |
