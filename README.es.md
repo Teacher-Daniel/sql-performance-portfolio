@@ -29,3 +29,4 @@ Consulta la [base de datos de telemetría vehicular](docs/sample-database.md), i
 |---|---|---|---|
 | 01 | [SARGabilidad de predicados de fecha](sql/02-experiments/01-date-sargability/README.md) | Un intervalo de fechas semiabierto redujo las lecturas lógicas 82.0% frente al filtrado mediante funciones utilizando el mismo índice. | Completado |
 | 02 | [Búsquedas de clave e índices cubrientes](sql/02-experiments/02-key-lookup-covering-index/README.md) | Un índice cubriente eliminó 500 búsquedas de clave y redujo las lecturas lógicas de 1,544 a 6 (99.61%). | Completado |
+| 03 | [Orden de columnas en índices compuestos](sql/02-experiments/03-composite-index-column-order/README.md) | Colocar primero la llave de igualdad redujo las lecturas lógicas de 690 a 3 (99.57%) al eliminar el filtrado residual. | Completado |
