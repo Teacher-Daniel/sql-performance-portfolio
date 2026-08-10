@@ -13,7 +13,9 @@ A hands-on portfolio documenting the analysis and optimization of SQL Server que
 
 ## Roadmap
 
-See the [project roadmap](docs/project-roadmap.md).
+The core portfolio has a fixed scope of eight performance experiments and culminates in `v1.0.0`.
+
+See the [project roadmap](docs/project-roadmap.md) for the experiment sequence, completion criteria, optional backlog, and scope-change rule.
 
 ## Lab Environment
 

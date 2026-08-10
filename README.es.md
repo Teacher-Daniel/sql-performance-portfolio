@@ -13,7 +13,9 @@ Proyecto práctico para documentar el análisis y la optimización de consultas 
 
 ## Hoja de ruta
 
-Consulta la [hoja de ruta del proyecto](docs/project-roadmap.md).
+El portafolio central tiene un alcance fijo de ocho experimentos de rendimiento y culminará en `v1.0.0`.
+
+Consulta la [hoja de ruta del proyecto](docs/project-roadmap.md) para conocer la secuencia de experimentos, los criterios de finalización, la lista opcional de trabajo futuro y la regla para cambiar el alcance.
 
 ## Entorno de laboratorio
 
