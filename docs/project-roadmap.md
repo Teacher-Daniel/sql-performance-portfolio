@@ -6,7 +6,7 @@ This portfolio documents a practical learning path for analyzing and improving S
 
 The core portfolio contains exactly eight numbered performance experiments.
 
-Five experiments are complete, and three experiments remain. Completing Experiment 08 and publishing `v1.0.0` will close the required portfolio scope.
+Six experiments are complete, and two experiments remain. Completing Experiment 08 and publishing `v1.0.0` will close the required portfolio scope.
 
 Reaching `v1.0.0` means that the planned portfolio is complete. It does not imply that every SQL Server performance topic has been exhausted.
 
@@ -17,22 +17,11 @@ Reaching `v1.0.0` means that the planned portfolio is complete. It does not impl
 | 03 | [Composite index column order](../sql/02-experiments/03-composite-index-column-order/README.md) | Equality, range, and residual predicates | Completed | Published |
 | 04 | [Cardinality estimates and data skew](../sql/02-experiments/04-cardinality-estimation-data-skew/README.md) | Statistics, estimates, and skew-aware plan choice | Completed | Published |
 | 05 | [Parameter-sensitive plans](../sql/02-experiments/05-parameter-sensitive-plans/README.md) | Cached-plan reuse, PSP eligibility, dispatchers, and variants | Completed | Published |
-| 06 | Join strategies and supporting indexes | Physical join selection under controlled cardinality and indexing conditions | Planned | `v0.8.0` |
+| 06 | [Join strategies and supporting indexes](../sql/02-experiments/06-join-strategies-supporting-indexes/README.md) | Physical join selection under controlled cardinality and indexing conditions | Completed | Published |
 | 07 | Memory grants, spills, and feedback | Runtime memory diagnostics and adaptive grant correction | Planned | `v0.9.0` |
 | 08 | Query Store regression detection and recovery | Historical plan analysis and reversible performance stabilization | Planned | `v1.0.0` |
 
 ## Core Experiment Sequence
-
-### Experiment 06: Join Strategies and Supporting Indexes
-
-This experiment will:
-
-- Compare physical join strategies under controlled row counts and indexing conditions.
-- Interpret `Nested Loops`, `Hash Match`, and `Merge Join` choices without treating any one algorithm as universally superior.
-- Measure the effect of supporting indexes on rows read, logical reads, CPU time, and elapsed time.
-- Preserve equivalent results and restore the original database state.
-
-Target release: `v0.8.0`.
 
 ### Experiment 07: Memory Grants, Spills, and Feedback
 
